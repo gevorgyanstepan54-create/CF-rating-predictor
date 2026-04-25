@@ -38,7 +38,7 @@ st.title("Codeforces Rating Predictor")
 with st.form("prediction_form"):
     contest = st.selectbox("Contest Type", list(models.keys()))
     rating = st.number_input("Your Current Rating", value=1500, step=1)
-    percent = st.number_input("Percentile (0.0=Top, 1.0=Bottom)",value=0.5)
+    percent = st.number_input("Percentile (0.0=Top, 1.0=Bottom)",value=0.5 ,step=0.0001)
     submit = st.form_submit_button("Predict Result")
 
 if submit:
